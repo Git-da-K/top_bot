@@ -1,4 +1,5 @@
 settings = {
     "prefix": ">",
-    "TOKEN": "ТУТ ТОКЕН"
+    "TOKEN": "AQUI ESTÁ O TOKEN"
+
 }
