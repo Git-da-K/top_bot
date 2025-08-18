@@ -1,8 +1,8 @@
 # top_bot
-Привет!
+Olá!
 
-В файле bot_logic ты найдешь все функции для бота
+No arquivo bot_logic você encontrará todas as funções do bot.
 
-Файлик settings содержит словарь с настройками для бота
+O arquivo de configurações contém um dicionário com as configurações do bot.
 
-А сам бот создается в файле main.py
+E o próprio bot é criado no arquivo main.py.
