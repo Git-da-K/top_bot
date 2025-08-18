@@ -1,23 +1,23 @@
 from settings import settings
 import discord
-# import * - это тоже самое, что перечислить все файлы
+# import * - isso é o mesmo que listar todos os arquivos
 from bot_logic import *
 
-# Переменная intents - хранит привилегии бота
+# Variáveis de intenção - armazena privilégios do bot
 intents = discord.Intents.default()
-# Включаем привелегию на чтение сообщений
+# Habilita o privilégio de ler mensagens
 intents.message_content = True
-# Создаем бота в переменной client и передаем все привелегии
+# Criamos um bot na variável do cliente e passamos todos os privilégios
 client = discord.Client(intents=intents)
 
 
-# Когда бот будет готов, он напишет в консоли свое название!
+# Quando o bot estiver pronto, ele escreverá seu nome no console!
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
 
 
-# Когда бот будет получать сообщение, он будет отправлять в этот же канал какие-то сообщения!
+# Quando o bot recebe uma mensagem, ele envia algumas mensagens para o mesmo canal!
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -31,6 +31,7 @@ async def on_message(message):
     elif message.content.startswith('$pass'):
         await message.channel.send(gen_pass(10))
     else:
-        await message.channel.send("Я не понимаю такую команду!")
+        await message.channel.send("Não entendo esse comando!")
 
 client.run(settings["TOKEN"])
+
