@@ -23,7 +23,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith('$hello'):
-        await message.channel.send('Привет! Я бот!')
+        await message.channel.send('Olá! Eu sou um bot')
     elif message.content.startswith('$smile'):
         await message.channel.send(gen_emodji())
     elif message.content.startswith('$coin'):
@@ -34,4 +34,5 @@ async def on_message(message):
         await message.channel.send("Não entendo esse comando!")
 
 client.run(settings["TOKEN"])
+
 
