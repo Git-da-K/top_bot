@@ -14,7 +14,7 @@ client = discord.Client(intents=intents)
 # Quando o bot estiver pronto, ele escreverá seu nome no console!
 @client.event
 async def on_ready():
-    print(f'We have logged in as {client.user}')
+    print(f'Fizemos login como {client.user}')
 
 
 # Quando o bot recebe uma mensagem, ele envia algumas mensagens para o mesmo canal!
@@ -34,5 +34,6 @@ async def on_message(message):
         await message.channel.send("Não entendo esse comando!")
 
 client.run(settings["TOKEN"])
+
 
 
